@@ -15,8 +15,8 @@ jobs:
           python-version: '3.9'
       - run: pip install -r requirements.txt
       - env:
-          BINANCE_API_KEY: ${{ odLqxabc0ZPFxZOlvKtvgn5Z2hYmOYwmfilbDxx81KkvlY6rzRkb50o4gR0cCsPJ }}
-          BINANCE_SECRET: ${{ ay6VztXW29duJNCDB20u9Ne72xnf3tP6uewJFlLaA3ZTM62BeufbgSsKHGq8pynt }}
-          TELEGRAM_TOKEN: ${{ 8007974151:AAEDe1lb4sTvkFAWMcgGjvahVksQHhk0ukI }}
-          CHAT_ID: ${{ 920308517 }}
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_SECRET: ${{ secrets.BINANCE_SECRET }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
         run: python trading_bot.py
